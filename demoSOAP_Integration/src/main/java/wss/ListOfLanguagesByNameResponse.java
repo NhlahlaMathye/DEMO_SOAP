@@ -12,6 +12,12 @@ public class ListOfLanguagesByNameResponse {
     @XmlElement(name = "ListOfLanguagesByNameResult", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected ListOfLanguagesByNameResult listOfLanguagesByNameResult;
 
+
+    public String toString()
+    {
+        return "" + listOfLanguagesByNameResult;
+    }
+
     public ListOfLanguagesByNameResult getListOfLanguagesByNameResult() {
         return listOfLanguagesByNameResult;
     }

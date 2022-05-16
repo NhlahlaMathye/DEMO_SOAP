@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 public class TLanguage {
 
-    @XmlElement(name = "ISOCode", namespace = "http://www.oorsprong.org/websamples.countryinfo")
+    @XmlElement(name = "sISOCode", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected String isoCode;
-    @XmlElement(name = "Name", namespace = "http://www.oorsprong.org/websamples.countryinfo")
+    @XmlElement(name = "sName", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected String name;
 
     public String _return()

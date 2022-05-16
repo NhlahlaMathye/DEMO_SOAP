@@ -25,13 +25,22 @@ public class MainDemoHandler {
         String objectSoapString = new DemoUtils().createGenericSoapString(objectXmlString);
         String apiCallResponse = DemoUtils.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
 
-        logger.info("Here is the response " + apiCallResponse);
+        //logger.info("Here is the response " + apiCallResponse);
         if(apiCallResponse == null)
         {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
         }
         ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) DemoUtils.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
 
-        System.out.println(listLanguages);
+        assert listLanguages != null;
+        //System.out.println(listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(0).getName());
+
+        for(int x = 0; x < listLanguages.getListOfLanguagesByNameResult().getTLanguages().size(); x++)
+        {
+            String name = listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(x).getName();
+            String code = listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(x).getIsoCode();
+
+            System.out.println(" Language name :" + name + "\n Language Code :" + code + "\n");
+        }
     }
 }
