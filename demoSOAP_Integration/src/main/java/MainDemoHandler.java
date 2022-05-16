@@ -38,6 +38,5 @@ public class MainDemoHandler {
             System.out.println("Here is the response: " + apiCallResponse);
         }
 
-
     }
 }

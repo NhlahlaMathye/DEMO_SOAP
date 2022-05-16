@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/DEMO_SOAP.iml" filepath="$PROJECT_DIR$/.idea/DEMO_SOAP.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoSOAP_Integration/demoSOAP_Integration.iml" filepath="$PROJECT_DIR$/demoSOAP_Integration/demoSOAP_Integration.iml" />
     </modules>
   </component>
 </project>
