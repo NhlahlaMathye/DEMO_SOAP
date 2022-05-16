@@ -15,10 +15,6 @@ public class TLanguage {
     @XmlElement(name = "sName", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected String name;
 
-    public String _return()
-    {
-        return "" + name + "" + isoCode;
-    }
 
     public String getIsoCode() {
         return isoCode;

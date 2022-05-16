@@ -13,11 +13,6 @@ public class ListOfLanguagesByNameResponse {
     protected ListOfLanguagesByNameResult listOfLanguagesByNameResult;
 
 
-    public String toString()
-    {
-        return "" + listOfLanguagesByNameResult;
-    }
-
     public ListOfLanguagesByNameResult getListOfLanguagesByNameResult() {
         return listOfLanguagesByNameResult;
     }

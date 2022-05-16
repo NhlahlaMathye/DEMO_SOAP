@@ -79,6 +79,7 @@ public class DemoUtils {
         soapBody.addDocument(document);
         return soapMessage;
     }
+
     public String getSoapMessageFromString(String xml) throws SOAPException, IOException {
         SOAPMessage soapEnvelope = createSoapEnvelope(xml);
 
