@@ -1,7 +1,9 @@
 import config.DemoUtils;
+import wss.Language;
 import wss.ListOfLanguagesByName;
 import wss.ListOfLanguagesByNameResponse;
 
+import java.util.Map;
 import java.util.logging.Logger;
 
 public class MainDemoHandler {
@@ -21,21 +23,23 @@ public class MainDemoHandler {
     public static void checkListOfLanguages()
     {
         ListOfLanguagesByName listOfLanguagesByName = new ListOfLanguagesByName();
-//        listOfLanguagesByName.setIsoCode("zun");
-//        listOfLanguagesByName.setName("Zuni");
 
         String objectXmlString = DemoUtils.marshallObject(listOfLanguagesByName);
         String objectSoapString = new DemoUtils().createGenericSoapString(objectXmlString);
-        logger.info("Check request body: \n" + objectSoapString);
+       // logger.info("Check request body: \n" + objectSoapString);
 
         String apiCallResponse = DemoUtils.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
 
+        logger.info("Here is the response " + apiCallResponse);
         if(apiCallResponse == null)
         {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
 
         }
-        //ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) DemoUtils.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
-        System.out.println("See the response : " + apiCallResponse);
+        ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) DemoUtils.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
+
+        assert listLanguages != null;
+        System.out.println(listLanguages.getListOfLanguagesByName());
+
     }
 }

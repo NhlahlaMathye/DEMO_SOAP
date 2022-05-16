@@ -15,6 +15,11 @@ public class ListOfLanguagesByName {
     @XmlElement(name = "Name")
     protected String name;
 
+    public String _return()
+    {
+        return "" + name + "" + isoCode;
+    }
+
     public String getIsoCode() {
         return isoCode;
     }
