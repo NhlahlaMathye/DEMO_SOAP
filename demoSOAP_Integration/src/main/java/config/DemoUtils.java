@@ -30,7 +30,7 @@ public class DemoUtils {
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
             jaxbMarshaller.marshal(object, sw);
             objXMLString = sw.toString();
-            logger.info(object.getClass().getSimpleName().toString()+" XML:\n"+objXMLString);
+            //logger.info(object.getClass().getSimpleName().toString()+" XML:\n"+objXMLString);
         } catch (JAXBException e) {
             logger.info("Error marshalling: "+object.getClass().getSimpleName()+"\n" + e.getMessage());
             return null;
