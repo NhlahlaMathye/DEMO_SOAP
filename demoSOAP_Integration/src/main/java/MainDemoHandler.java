@@ -1,21 +1,15 @@
-import config.DemoUtils;
 import config.Utilities;
-import wcs.ListCountryNamesByNamesResponse;
-import wcs.TCountryName;
-import wss.ListOfLanguagesByNameResponse;
-import wss.TLanguage;
+
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
-import java.util.logging.Logger;
 
 public class MainDemoHandler {
-
 
     static boolean checkInfo;
     static int programLevel = 0;
 
-    static final Logger logger = Logger.getLogger("DEMO");
+    //static final Logger logger = Logger.getLogger("DEMO");
 
     public static void main(String[] args)
     {
