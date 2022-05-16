@@ -8,11 +8,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlRootElement(name = "ListOfLanguagesByName", namespace = "http://www.oorsprong.org/websamples.countryinfo")
 @XmlAccessorType(XmlAccessType.FIELD)
 
-public class ListOfLanguagesByName {
+public class TLanguage {
 
-    @XmlElement(name = "ISOCode")
+    @XmlElement(name = "ISOCode", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected String isoCode;
-    @XmlElement(name = "Name")
+    @XmlElement(name = "Name", namespace = "http://www.oorsprong.org/websamples.countryinfo")
     protected String name;
 
     public String _return()

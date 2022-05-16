@@ -9,25 +9,14 @@ import javax.xml.bind.annotation.XmlRootElement;
 @XmlAccessorType(XmlAccessType.FIELD)
 public class ListOfLanguagesByNameResponse {
 
-    @XmlElement(name = "ListOfLanguagesByNameResult")
-    protected String listOfLanguagesByNameResult;
-    @XmlElement(name = "tLanguage")
-   protected ListOfLanguagesByName listOfLanguagesByName;
+    @XmlElement(name = "ListOfLanguagesByNameResult", namespace = "http://www.oorsprong.org/websamples.countryinfo")
+    protected ListOfLanguagesByNameResult listOfLanguagesByNameResult;
 
-
-    public ListOfLanguagesByName getListOfLanguagesByName() {
-        return listOfLanguagesByName;
-    }
-
-    public void setListOfLanguagesByName(ListOfLanguagesByName listOfLanguagesByName) {
-        this.listOfLanguagesByName = listOfLanguagesByName;
-    }
-
-    public String getListOfLanguagesByNameResult() {
+    public ListOfLanguagesByNameResult getListOfLanguagesByNameResult() {
         return listOfLanguagesByNameResult;
     }
 
-    public void setListOfLanguagesByNameResult(String listOfLanguagesByNameResult) {
+    public void setListOfLanguagesByNameResult(ListOfLanguagesByNameResult listOfLanguagesByNameResult) {
         this.listOfLanguagesByNameResult = listOfLanguagesByNameResult;
     }
 }
