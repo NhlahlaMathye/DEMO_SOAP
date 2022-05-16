@@ -1,12 +1,13 @@
 import config.DemoUtils;
 import wss.ListOfLanguagesByName;
+import wss.ListOfLanguagesByNameResponse;
 
 import java.util.logging.Logger;
 
 public class MainDemoHandler {
 
-    private static final String BASE_URL = "http://www.oorsprong.org/websamples.countryinfo";
-    private static final String MEDIA_TYPE = "UTF-8";
+    private static final String BASE_URL = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
+    private static final String MEDIA_TYPE = "text/xml; charset=utf-8";
 
     static final Logger logger = Logger.getLogger("DEMO");
 
@@ -20,8 +21,8 @@ public class MainDemoHandler {
     public static void checkListOfLanguages()
     {
         ListOfLanguagesByName listOfLanguagesByName = new ListOfLanguagesByName();
-        listOfLanguagesByName.setIsoCode("zun");
-        listOfLanguagesByName.setName("Zuni");
+//        listOfLanguagesByName.setIsoCode("zun");
+//        listOfLanguagesByName.setName("Zuni");
 
         String objectXmlString = DemoUtils.marshallObject(listOfLanguagesByName);
         String objectSoapString = new DemoUtils().createGenericSoapString(objectXmlString);
@@ -34,9 +35,7 @@ public class MainDemoHandler {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
 
         }
-        else{
-            System.out.println("Here is the response: " + apiCallResponse);
-        }
-
+        //ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) DemoUtils.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
+        System.out.println("See the response : " + apiCallResponse);
     }
 }

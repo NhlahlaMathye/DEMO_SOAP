@@ -6,6 +6,7 @@ import org.w3c.dom.Document;
 import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
+import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.soap.*;
@@ -37,6 +38,22 @@ public class DemoUtils {
 
         return objXMLString;
     }
+
+    public static Object unMarshallObject(String responseString, Class responseClass){
+        Object responseObject;
+        try {
+            SOAPMessage message = MessageFactory.newInstance().createMessage(null, new ByteArrayInputStream(responseString.getBytes())); //Create soap message from api response
+            Unmarshaller unmarshaller = JAXBContext.newInstance(responseClass).createUnmarshaller(); //Create CreateXMTransactionResponse unmarshaller
+            responseObject = unmarshaller.unmarshal(message.getSOAPBody().extractContentAsDocument()); //Map to CreateXMTransactionResponse object
+        }
+        catch(Exception e){
+            logger.info("Error unmarshalling: "+responseClass.getSimpleName()+"Response String: \n" + e.getMessage());
+            return null;
+        }
+
+        return responseObject;
+    }
+
     public static Document loadXMLFromString(String xml) throws Exception {
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 
@@ -90,7 +107,7 @@ public class DemoUtils {
         final Request request = new Request.Builder()
                 .url(url)
                 .post(body)
-                .addHeader("Content-type","text/xml;charset=UTF-8")
+                .addHeader("Content-type","text/xml; charset=UTF-8")
                 .build();
         OkHttpClient client = new OkHttpClient();
 
