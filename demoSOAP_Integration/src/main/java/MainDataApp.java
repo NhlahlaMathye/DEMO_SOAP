@@ -1,10 +1,10 @@
-import config.Utilities;
+import config.MainDataUtils;
 
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class MainDemoHandler {
+public class MainDataApp {
 
     static boolean checkInfo;
     static int programLevel = 0;
@@ -17,7 +17,7 @@ public class MainDemoHandler {
         checkInfo = false;
         while (programLevel != 9)
         {
-            MainDemoHandler.mainProgramData(programLevel);
+            MainDataApp.mainProgramData(programLevel);
         }
 
     }
@@ -39,12 +39,12 @@ public class MainDemoHandler {
                     programLevel = sc.nextInt();
                     break;
                 case 1:
-                    Utilities.checkListOfLanguages();
+                    MainDataUtils.checkListOfLanguages();
                     programLevel = 0;
                     break;
 
                 case 2:
-                    Utilities.checkListOfCountryAndName();
+                    MainDataUtils.checkListOfCountryAndName();
                     programLevel = 0;
                     break;
 

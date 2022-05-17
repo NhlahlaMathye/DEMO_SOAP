@@ -5,7 +5,7 @@ import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
 import wss.TLanguage;
 
-public class Utilities {
+public class MainDataUtils {
 
     private static final String BASE_URL = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
     private static final String MEDIA_TYPE = "text/xml; charset=utf-8";
