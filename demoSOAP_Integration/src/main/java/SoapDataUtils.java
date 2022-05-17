@@ -1,11 +1,10 @@
-package config;
-
+import config.DemoUtils;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
 import wss.TLanguage;
 
-public class LanguageAndCountryDataUtils {
+public class SoapDataUtils {
 
     private static final String BASE_URL = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
     private static final String MEDIA_TYPE = "text/xml; charset=utf-8";

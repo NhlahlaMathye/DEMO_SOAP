@@ -1,10 +1,7 @@
-import config.LanguageAndCountryDataUtils;
-
-
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class LanguageAndCountryDataApp {
+public class SoapDataApp {
 
     static boolean checkInfo;
     static int programLevel = 0;
@@ -17,7 +14,7 @@ public class LanguageAndCountryDataApp {
         checkInfo = false;
         while (programLevel != 9)
         {
-            LanguageAndCountryDataApp.mainProgramData(programLevel);
+            SoapDataApp.mainProgramData(programLevel);
         }
 
     }
@@ -39,12 +36,12 @@ public class LanguageAndCountryDataApp {
                     programLevel = sc.nextInt();
                     break;
                 case 1:
-                    LanguageAndCountryDataUtils.checkListOfLanguages();
+                    SoapDataUtils.checkListOfLanguages();
                     programLevel = 0;
                     break;
 
                 case 2:
-                    LanguageAndCountryDataUtils.checkListOfCountryAndName();
+                    SoapDataUtils.checkListOfCountryAndName();
                     programLevel = 0;
                     break;
 
