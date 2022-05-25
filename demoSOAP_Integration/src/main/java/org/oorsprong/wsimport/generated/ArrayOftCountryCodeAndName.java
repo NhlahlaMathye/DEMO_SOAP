@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ArrayOftCountryCodeAndName {
 
     @XmlElement(nillable = true)
-    public List<TCountryCodeAndName> tCountryCodeAndName;
+    protected List<TCountryCodeAndName> tCountryCodeAndName;
 
     /**
      * Gets the value of the tCountryCodeAndName property.
