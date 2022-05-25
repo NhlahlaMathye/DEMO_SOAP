@@ -143,7 +143,7 @@
                         <wsdlUrl>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL</wsdlUrl>
                     </wsdlUrls>
                     <keep>true</keep>
-                    <packageName>org.oorsprong.ws.generated</packageName>
+                    <packageName>org.oorsprong.wsimport.generated</packageName>
                     <sourceDestDir>src/main/java</sourceDestDir>
                 </configuration>
             </plugin>
