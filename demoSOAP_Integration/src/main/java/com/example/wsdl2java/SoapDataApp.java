@@ -21,7 +21,7 @@ public class SoapDataApp {
     }
 
     private static void mainProgramData(int inputUser) throws InputMismatchException, MalformedURLException {
-        SoapDataUtils dataUtils = new SoapDataUtils();
+
         Scanner sc = new Scanner(System.in);
 
         try{
@@ -37,12 +37,12 @@ public class SoapDataApp {
                     programLevel = sc.nextInt();
                     break;
                 case 1:
-                    dataUtils.listOfLanguages();
+                    SoapDataUtils.listOfLanguages();
                     programLevel = 0;
                     break;
 
                 case 2:
-                    dataUtils.listOfCountries();
+                    SoapDataUtils.listOfCountries();
                     programLevel = 0;
                     break;
 

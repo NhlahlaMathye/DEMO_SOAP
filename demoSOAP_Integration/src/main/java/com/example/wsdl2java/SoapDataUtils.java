@@ -1,6 +1,7 @@
 package com.example.wsdl2java;
 
 import demo.handler.SoapDataHandlerObject;
+import org.oorsprong.axis.generated.CountryInfoServiceStub;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
@@ -30,7 +31,6 @@ public class SoapDataUtils {
 
     static final String ENDPOINT = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
     private static URL url = null;
-
     static {
         try {
             url = URI.create(ENDPOINT).toURL();
