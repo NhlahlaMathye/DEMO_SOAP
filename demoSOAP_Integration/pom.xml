@@ -19,8 +19,8 @@
             <artifactId>okhttp</artifactId>
             <version>4.9.3</version>
         </dependency>
-
-        <dependency>
+             
+                     <dependency>
             <groupId>org.apache.axis2</groupId>
             <artifactId>axis2</artifactId>
             <version>1.6.2</version>
@@ -94,8 +94,8 @@
         </dependency>
 
     </dependencies>
-
-    <build>
+         
+             <build>
         <resources>
             <resource>
                 <directory>target/generated-sources/axis2/wsdl2code/resources</directory>
