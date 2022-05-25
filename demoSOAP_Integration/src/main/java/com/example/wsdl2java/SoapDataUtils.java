@@ -1,6 +1,6 @@
 package com.example.wsdl2java;
 
-import demo.handler.DemoHandlerObj;
+import demo.handler.SoapDataHandlerObject;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
@@ -101,24 +101,20 @@ public class SoapDataUtils {
     public static void checkListOfCountryAndName()
     {
         TCountryName listOfCountryName = new TCountryName();
-
-        String objectXmlString = DemoHandlerObj.marshallObject(listOfCountryName);
-        String objectSoapString = new DemoHandlerObj().createGenericSoapString(objectXmlString);
-        String apiCallResponse = DemoHandlerObj.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
-
+        String objectXmlString = SoapDataHandlerObject.marshallObject(listOfCountryName);
+        String objectSoapString = new SoapDataHandlerObject().createGenericSoapString(objectXmlString);
+        String apiCallResponse = SoapDataHandlerObject.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
         if(apiCallResponse == null)
         {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
         }
-
-        ListCountryNamesByNamesResponse listCountries = (ListCountryNamesByNamesResponse) DemoHandlerObj.unMarshallObject(apiCallResponse, ListCountryNamesByNamesResponse.class);
+        ListCountryNamesByNamesResponse listCountries = (ListCountryNamesByNamesResponse) SoapDataHandlerObject.unMarshallObject(apiCallResponse, ListCountryNamesByNamesResponse.class);
 
         assert listCountries != null;
         for (int i = 0; i < listCountries.getListCountryNamesByNamesResult().gettCountryNames().size(); i++)
         {
             String countyName = listCountries.getListCountryNamesByNamesResult().gettCountryNames().get(i).getName();
             String countryCode = listCountries.getListCountryNamesByNamesResult().gettCountryNames().get(i).getIsoCOde();
-
             System.out.println(" Country Name: " + countyName + " \n Country Code: " + countryCode + " \n");
         }
     }
@@ -126,26 +122,20 @@ public class SoapDataUtils {
     public static void checkListOfLanguages()
     {
         TLanguage listOfLanguagesByName = new TLanguage();
-
-        String objectXmlString = DemoHandlerObj.marshallObject(listOfLanguagesByName);
-        String objectSoapString = new DemoHandlerObj().createGenericSoapString(objectXmlString);
-        String apiCallResponse = DemoHandlerObj.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
-
+        String objectXmlString = SoapDataHandlerObject.marshallObject(listOfLanguagesByName);
+        String objectSoapString = new SoapDataHandlerObject().createGenericSoapString(objectXmlString);
+        String apiCallResponse = SoapDataHandlerObject.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
         //logger.info("Here is the response " + apiCallResponse);
         if(apiCallResponse == null)
         {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
         }
-        ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) DemoHandlerObj.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
-
+        ListOfLanguagesByNameResponse listLanguages = (ListOfLanguagesByNameResponse) SoapDataHandlerObject.unMarshallObject(apiCallResponse, ListOfLanguagesByNameResponse.class);
         assert listLanguages != null;
-        //System.out.println(listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(0).getName());
-
         for(int x = 0; x < listLanguages.getListOfLanguagesByNameResult().getTLanguages().size(); x++)
         {
             String name = listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(x).getName();
             String code = listLanguages.getListOfLanguagesByNameResult().getTLanguages().get(x).getIsoCode();
-
             System.out.println(" Language name :" + name + "\n Language Code :" + code + "\n");
         }
     }

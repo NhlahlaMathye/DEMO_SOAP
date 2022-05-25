@@ -17,9 +17,9 @@ import java.io.StringWriter;
 import java.util.logging.Logger;
 
 
-public class DemoHandlerObj {
+public class SoapDataHandlerObject {
 
-    static final Logger logger = Logger.getLogger(DemoHandlerObj.class.getSimpleName());
+    static final Logger logger = Logger.getLogger(SoapDataHandlerObject.class.getSimpleName());
 
     public static String marshallObject(Object object){
         StringWriter sw = new StringWriter();
