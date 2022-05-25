@@ -1,6 +1,6 @@
 package com.example.wsdl2java;
 
-import config.DemoHandlerObj;
+import demo.handler.DemoHandlerObj;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
