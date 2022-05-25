@@ -29,14 +29,23 @@ public class SoapDataUtils {
     }
 
     static final String ENDPOINT = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
-    private final URL url = URI.create(ENDPOINT).toURL();
-    private   final CountryInfoService service = new CountryInfoService(url);
-    private final CountryInfoServiceSoapType port = service.getPort(CountryInfoServiceSoapType.class);
+    private static URL url = null;
+
+    static {
+        try {
+            url = URI.create(ENDPOINT).toURL();
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private static final CountryInfoService service = new CountryInfoService(url);
+    private static final CountryInfoServiceSoapType port = service.getPort(CountryInfoServiceSoapType.class);
 
     public SoapDataUtils() throws MalformedURLException {
     }
 
-    public   void getCountriesByName()
+    public static void getCountriesByName()
     {
         for (int x = 0; x < port.listOfCountryNamesByName().tCountryCodeAndName.size(); x++) {
 
@@ -46,7 +55,7 @@ public class SoapDataUtils {
         }
     }
 
-    public void getLanguagesByName()
+    public static void getLanguagesByName()
     {
         for (int i = 0; i < port.listOfLanguagesByName().tLanguage.size(); i++)
         {
@@ -56,7 +65,7 @@ public class SoapDataUtils {
         }
     }
 
-    public void listOfCountries() throws RemoteException {
+    public static void listOfCountries() throws RemoteException {
         ListOfCountryNamesByNameDocument requestDoc = ListOfCountryNamesByNameDocument.Factory.newInstance();
         ListOfCountryNamesByNameDocument.ListOfCountryNamesByName request = ListOfCountryNamesByNameDocument.ListOfCountryNamesByName.Factory.newInstance();
 
@@ -77,7 +86,7 @@ public class SoapDataUtils {
         }
     }
 
-    public void listOfLanguages() throws RemoteException{
+    public static void listOfLanguages() throws RemoteException{
 
         ListOfLanguagesByNameDocument requestLanguages = ListOfLanguagesByNameDocument.Factory.newInstance();
         ListOfLanguagesByNameDocument.ListOfLanguagesByName reqLanguage = ListOfLanguagesByNameDocument.ListOfLanguagesByName.Factory.newInstance();
