@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.XmlType;
 public class ArrayOftLanguage {
 
     @XmlElement(nillable = true)
-    protected List<TLanguage> tLanguage;
+    public List<TLanguage> tLanguage;
 
     /**
      * Gets the value of the tLanguage property.

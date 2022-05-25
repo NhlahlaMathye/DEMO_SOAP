@@ -10,7 +10,6 @@ import javax.xml.bind.Unmarshaller;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.soap.*;
-import java.awt.*;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -18,9 +17,9 @@ import java.io.StringWriter;
 import java.util.logging.Logger;
 
 
-public class DemoUtils {
+public class DemoHandlerObj {
 
-    static final Logger logger = Logger.getLogger(DemoUtils.class.getSimpleName());
+    static final Logger logger = Logger.getLogger(DemoHandlerObj.class.getSimpleName());
 
     public static String marshallObject(Object object){
         StringWriter sw = new StringWriter();

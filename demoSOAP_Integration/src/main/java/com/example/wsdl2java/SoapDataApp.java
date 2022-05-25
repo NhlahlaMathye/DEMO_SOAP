@@ -1,3 +1,7 @@
+package com.example.wsdl2java;
+
+import java.net.MalformedURLException;
+import java.rmi.RemoteException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -6,10 +10,7 @@ public class SoapDataApp {
     static boolean checkInfo;
     static int programLevel = 0;
 
-    //static final Logger logger = Logger.getLogger("DEMO");
-
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) throws MalformedURLException {
 
         checkInfo = false;
         while (programLevel != 9)
@@ -19,8 +20,8 @@ public class SoapDataApp {
 
     }
 
-    private static void mainProgramData(int inputUser) throws InputMismatchException
-    {
+    private static void mainProgramData(int inputUser) throws InputMismatchException, MalformedURLException {
+        SoapDataUtils dataUtils = new SoapDataUtils();
         Scanner sc = new Scanner(System.in);
 
         try{
@@ -36,12 +37,12 @@ public class SoapDataApp {
                     programLevel = sc.nextInt();
                     break;
                 case 1:
-                    SoapDataUtils.checkListOfLanguages();
+                    dataUtils.listOfLanguages();
                     programLevel = 0;
                     break;
 
                 case 2:
-                    SoapDataUtils.checkListOfCountryAndName();
+                    dataUtils.listOfCountries();
                     programLevel = 0;
                     break;
 
@@ -51,9 +52,12 @@ public class SoapDataApp {
         }catch (InputMismatchException e)
         {
             System.out.println("Expects a number!!");
+        } catch (RemoteException e) {
+            e.printStackTrace();
         }
 
     }
+
 
 
 }
