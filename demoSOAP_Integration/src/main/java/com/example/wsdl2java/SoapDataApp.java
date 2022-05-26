@@ -1,8 +1,6 @@
 package com.example.wsdl2java;
 
 import org.apache.axis2.AxisFault;
-import org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler;
-import org.oorsprong.websamples_countryinfo.CountryInfoServiceStub;
 
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
