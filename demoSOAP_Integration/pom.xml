@@ -117,8 +117,7 @@
                         </goals>
                         <configuration>
                             <unpackClasses>true</unpackClasses>
-                            <databindingName>xmlbeans</databindingName>
-                            <packageName>org.oorsprong.axis.generated</packageName>
+                            <packageName>org.oorsprong.websamples_countryinfo</packageName>
                             <wsdlFile>http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL</wsdlFile>
                             <outputDirectory>src/main/java</outputDirectory>
                             <flattenFiles>true</flattenFiles>

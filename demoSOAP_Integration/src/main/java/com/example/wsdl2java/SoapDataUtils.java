@@ -1,7 +1,8 @@
 package com.example.wsdl2java;
 
 import demo.handler.SoapDataHandlerObject;
-import org.oorsprong.axis.generated.CountryInfoServiceStub;
+import org.oorsprong.websamples_countryinfo.CountryInfoServiceStub;
+import org.oorsprong.www.websamples_countryinfo.*;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
@@ -9,7 +10,6 @@ import wss.TLanguage;
 import org.apache.axis2.AxisFault;
 import org.oorsprong.wsimport.generated.CountryInfoService;
 import org.oorsprong.wsimport.generated.CountryInfoServiceSoapType;
-import org.oorsprong.www.websamples_countryinfo.*;
 import java.net.MalformedURLException;
 import java.net.URI;
 import java.net.URL;
@@ -20,14 +20,6 @@ public class SoapDataUtils {
     private static final String BASE_URL = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
     private static final String MEDIA_TYPE = "text/xml; charset=utf-8";
 
-    private static CountryInfoServiceStub stub;
-    static {
-        try {
-            stub = new CountryInfoServiceStub();
-        } catch (AxisFault e) {
-            e.printStackTrace();
-        }
-    }
 
     static final String ENDPOINT = "http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso";
     private static URL url = null;
@@ -42,50 +34,44 @@ public class SoapDataUtils {
     private static final CountryInfoService service = new CountryInfoService(url);
     private static final CountryInfoServiceSoapType port = service.getPort(CountryInfoServiceSoapType.class);
 
-    public SoapDataUtils() throws MalformedURLException {
+    static CountryInfoServiceStub serviceStub;
+
+    static {
+        try {
+            serviceStub = new CountryInfoServiceStub("http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL");
+        } catch (AxisFault e) {
+            e.printStackTrace();
+        }
+    }
+
+    public SoapDataUtils() throws MalformedURLException, AxisFault {
     }
 
 
     public static void listOfCountries() throws RemoteException {
-        ListOfCountryNamesByNameDocument requestDoc = ListOfCountryNamesByNameDocument.Factory.newInstance();
-        ListOfCountryNamesByNameDocument.ListOfCountryNamesByName request = ListOfCountryNamesByNameDocument.ListOfCountryNamesByName.Factory.newInstance();
-
-        requestDoc.setListOfCountryNamesByName(request);
-        ListOfCountryNamesByNameResponseDocument responseDocument = stub.listOfCountryNamesByName(requestDoc);
-        assert responseDocument != null;
-        ListOfCountryNamesByNameResponseDocument.ListOfCountryNamesByNameResponse response = responseDocument.getListOfCountryNamesByNameResponse();
-        assert response != null;
-
-        ArrayOftCountryCodeAndName result = response.getListOfCountryNamesByNameResult();
-        assert result != null;
-
-        for (int x = 0; x < result.sizeOfTCountryCodeAndNameArray(); x++)
-        {
-            String name = result.getTCountryCodeAndNameArray(x).getSName();
-            String code = result.getTCountryCodeAndNameArray(x).getSISOCode();
-            System.out.println("Country Name: " + name + "\nCountry Code:" + code + "\n");
-        }
+//        ListOfCountryNamesByNameDocument requestDoc = ListOfCountryNamesByNameDocument.Factory.newInstance();
+//        ListOfCountryNamesByNameDocument.ListOfCountryNamesByName request = ListOfCountryNamesByNameDocument.ListOfCountryNamesByName.Factory.newInstance();
+//
+//        requestDoc.setListOfCountryNamesByName(request);
+//        ListOfCountryNamesByNameResponseDocument responseDocument = stub.listOfCountryNamesByName(requestDoc);
+//        assert responseDocument != null;
+//        ListOfCountryNamesByNameResponseDocument.ListOfCountryNamesByNameResponse response = responseDocument.getListOfCountryNamesByNameResponse();
+//        assert response != null;
+//
+//        ArrayOftCountryCodeAndName result = response.getListOfCountryNamesByNameResult();
+//        assert result != null;
+//
+//        for (int x = 0; x < result.sizeOfTCountryCodeAndNameArray(); x++)
+//        {
+//            String name = result.getTCountryCodeAndNameArray(x).getSName();
+//            String code = result.getTCountryCodeAndNameArray(x).getSISOCode();
+//            System.out.println("Country Name: " + name + "\nCountry Code:" + code + "\n");
+//        }
     }
 
-    public static void listOfLanguages() throws RemoteException{
+    public static void listOfLanguages() throws Exception {
 
-        ListOfLanguagesByNameDocument requestLanguages = ListOfLanguagesByNameDocument.Factory.newInstance();
-        ListOfLanguagesByNameDocument.ListOfLanguagesByName reqLanguage = ListOfLanguagesByNameDocument.ListOfLanguagesByName.Factory.newInstance();
-        requestLanguages.setListOfLanguagesByName(reqLanguage);
 
-        ListOfLanguagesByNameResponseDocument responseLanguage = stub.listOfLanguagesByName(requestLanguages);
-        assert responseLanguage != null;
-        ListOfLanguagesByNameResponseDocument.ListOfLanguagesByNameResponse languagesByNameResponse =  responseLanguage.getListOfLanguagesByNameResponse();
-        assert languagesByNameResponse != null;
-
-        ArrayOftLanguage results = languagesByNameResponse.getListOfLanguagesByNameResult();
-        assert results != null;
-        for (int l = 0; l < results.sizeOfTLanguageArray(); l++)
-        {
-            String name = results.getTLanguageArray(l).getSName();
-            String isoCode = results.getTLanguageArray(l).getSISOCode();
-            System.out.println("Language Name:" + name + "\nLanguage Code:" + isoCode + "\n");
-        }
     }
 
     public static void checkListOfCountryAndName()

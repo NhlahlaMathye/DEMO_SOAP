@@ -1,5 +1,9 @@
 package com.example.wsdl2java;
 
+import org.apache.axis2.AxisFault;
+import org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler;
+import org.oorsprong.websamples_countryinfo.CountryInfoServiceStub;
+
 import java.net.MalformedURLException;
 import java.rmi.RemoteException;
 import java.util.InputMismatchException;
@@ -10,13 +14,15 @@ public class SoapDataApp {
     static boolean checkInfo;
     static int programLevel = 0;
 
-    public static void main(String[] args) throws MalformedURLException {
+    public static void main(String[] args) throws MalformedURLException, AxisFault {
 
         checkInfo = false;
         while (programLevel != 9)
         {
             SoapDataApp.mainProgramData(programLevel);
         }
+
+
 
     }
 
@@ -53,6 +59,8 @@ public class SoapDataApp {
         {
             System.out.println("Expects a number!!");
         } catch (RemoteException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

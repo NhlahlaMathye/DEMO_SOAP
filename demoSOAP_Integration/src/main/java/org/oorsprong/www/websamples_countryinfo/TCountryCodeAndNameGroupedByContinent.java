@@ -1,126 +1,491 @@
-/*
- * XML Type:  tCountryCodeAndNameGroupedByContinent
- * Namespace: http://www.oorsprong.org/websamples.countryinfo
- * Java type: org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent
- *
- * Automatically generated - do not modify.
- */
-package org.oorsprong.www.websamples_countryinfo;
-
 
 /**
- * An XML tCountryCodeAndNameGroupedByContinent(@http://www.oorsprong.org/websamples.countryinfo).
+ * TCountryCodeAndNameGroupedByContinent.java
  *
- * This is a complex type.
+ * This file was auto-generated from WSDL
+ * by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:34:40 IST)
  */
-public interface TCountryCodeAndNameGroupedByContinent extends org.apache.xmlbeans.XmlObject
-{
-    public static final org.apache.xmlbeans.SchemaType type = (org.apache.xmlbeans.SchemaType)
-        org.apache.xmlbeans.XmlBeans.typeSystemForClassLoader(TCountryCodeAndNameGroupedByContinent.class.getClassLoader(), "schemaorg_apache_xmlbeans.system.sB6F1F2A3F71105CBEFEB2F5E948A2999").resolveHandle("tcountrycodeandnamegroupedbycontinent3231type");
+
+            
+                package org.oorsprong.www.websamples_countryinfo;
+            
+
+            /**
+            *  TCountryCodeAndNameGroupedByContinent bean class
+            */
+            @SuppressWarnings({"unchecked","unused"})
+        
+        public  class TCountryCodeAndNameGroupedByContinent
+        implements org.apache.axis2.databinding.ADBBean{
+        /* This type was generated from the piece of schema that had
+                name = tCountryCodeAndNameGroupedByContinent
+                Namespace URI = http://www.oorsprong.org/websamples.countryinfo
+                Namespace Prefix = 
+                */
+            
+
+                        /**
+                        * field for Continent
+                        */
+
+                        
+                                    protected org.oorsprong.www.websamples_countryinfo.TContinent localContinent ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return org.oorsprong.www.websamples_countryinfo.TContinent
+                           */
+                           public  org.oorsprong.www.websamples_countryinfo.TContinent getContinent(){
+                               return localContinent;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param Continent
+                               */
+                               public void setContinent(org.oorsprong.www.websamples_countryinfo.TContinent param){
+                            
+                                            this.localContinent=param;
+                                    
+
+                               }
+                            
+
+                        /**
+                        * field for CountryCodeAndNames
+                        */
+
+                        
+                                    protected org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName localCountryCodeAndNames ;
+                                
+
+                           /**
+                           * Auto generated getter method
+                           * @return org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName
+                           */
+                           public  org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName getCountryCodeAndNames(){
+                               return localCountryCodeAndNames;
+                           }
+
+                           
+                        
+                            /**
+                               * Auto generated setter method
+                               * @param param CountryCodeAndNames
+                               */
+                               public void setCountryCodeAndNames(org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName param){
+                            
+                                            this.localCountryCodeAndNames=param;
+                                    
+
+                               }
+                            
+
+     
+     
+        /**
+        *
+        * @param parentQName
+        * @param factory
+        * @return org.apache.axiom.om.OMElement
+        */
+       public org.apache.axiom.om.OMElement getOMElement (
+               final javax.xml.namespace.QName parentQName,
+               final org.apache.axiom.om.OMFactory factory) throws org.apache.axis2.databinding.ADBException{
+
+
+        
+               org.apache.axiom.om.OMDataSource dataSource =
+                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
+               return factory.createOMElement(dataSource,parentQName);
+            
+        }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter)
+                                throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+                           serialize(parentQName,xmlWriter,false);
+         }
+
+         public void serialize(final javax.xml.namespace.QName parentQName,
+                               javax.xml.stream.XMLStreamWriter xmlWriter,
+                               boolean serializeType)
+            throws javax.xml.stream.XMLStreamException, org.apache.axis2.databinding.ADBException{
+            
+                
+
+
+                java.lang.String prefix = null;
+                java.lang.String namespace = null;
+                
+
+                    prefix = parentQName.getPrefix();
+                    namespace = parentQName.getNamespaceURI();
+                    writeStartElement(prefix, namespace, parentQName.getLocalPart(), xmlWriter);
+                
+                  if (serializeType){
+               
+
+                   java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://www.oorsprong.org/websamples.countryinfo");
+                   if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           namespacePrefix+":tCountryCodeAndNameGroupedByContinent",
+                           xmlWriter);
+                   } else {
+                       writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
+                           "tCountryCodeAndNameGroupedByContinent",
+                           xmlWriter);
+                   }
+
+               
+                   }
+               
+                                            if (localContinent==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("Continent cannot be null!!");
+                                            }
+                                           localContinent.serialize(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","Continent"),
+                                               xmlWriter);
+                                        
+                                            if (localCountryCodeAndNames==null){
+                                                 throw new org.apache.axis2.databinding.ADBException("CountryCodeAndNames cannot be null!!");
+                                            }
+                                           localCountryCodeAndNames.serialize(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","CountryCodeAndNames"),
+                                               xmlWriter);
+                                        
+                    xmlWriter.writeEndElement();
+               
+
+        }
+
+        private static java.lang.String generatePrefix(java.lang.String namespace) {
+            if(namespace.equals("http://www.oorsprong.org/websamples.countryinfo")){
+                return "";
+            }
+            return org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+        }
+
+        /**
+         * Utility method to write an element start tag.
+         */
+        private void writeStartElement(java.lang.String prefix, java.lang.String namespace, java.lang.String localPart,
+                                       javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String writerPrefix = xmlWriter.getPrefix(namespace);
+            if (writerPrefix != null) {
+                xmlWriter.writeStartElement(namespace, localPart);
+            } else {
+                if (namespace.length() == 0) {
+                    prefix = "";
+                } else if (prefix == null) {
+                    prefix = generatePrefix(namespace);
+                }
+
+                xmlWriter.writeStartElement(prefix, localPart, namespace);
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+        }
+        
+        /**
+         * Util method to write an attribute with the ns prefix
+         */
+        private void writeAttribute(java.lang.String prefix,java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (xmlWriter.getPrefix(namespace) == null) {
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            xmlWriter.writeAttribute(namespace,attName,attValue);
+        }
+
+        /**
+         * Util method to write an attribute without the ns prefix
+         */
+        private void writeAttribute(java.lang.String namespace,java.lang.String attName,
+                                    java.lang.String attValue,javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException{
+            if (namespace.equals("")) {
+                xmlWriter.writeAttribute(attName,attValue);
+            } else {
+                registerPrefix(xmlWriter, namespace);
+                xmlWriter.writeAttribute(namespace,attName,attValue);
+            }
+        }
+
+
+           /**
+             * Util method to write an attribute without the ns prefix
+             */
+            private void writeQNameAttribute(java.lang.String namespace, java.lang.String attName,
+                                             javax.xml.namespace.QName qname, javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+                java.lang.String attributeNamespace = qname.getNamespaceURI();
+                java.lang.String attributePrefix = xmlWriter.getPrefix(attributeNamespace);
+                if (attributePrefix == null) {
+                    attributePrefix = registerPrefix(xmlWriter, attributeNamespace);
+                }
+                java.lang.String attributeValue;
+                if (attributePrefix.trim().length() > 0) {
+                    attributeValue = attributePrefix + ":" + qname.getLocalPart();
+                } else {
+                    attributeValue = qname.getLocalPart();
+                }
+
+                if (namespace.equals("")) {
+                    xmlWriter.writeAttribute(attName, attributeValue);
+                } else {
+                    registerPrefix(xmlWriter, namespace);
+                    xmlWriter.writeAttribute(namespace, attName, attributeValue);
+                }
+            }
+        /**
+         *  method to handle Qnames
+         */
+
+        private void writeQName(javax.xml.namespace.QName qname,
+                                javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+            java.lang.String namespaceURI = qname.getNamespaceURI();
+            if (namespaceURI != null) {
+                java.lang.String prefix = xmlWriter.getPrefix(namespaceURI);
+                if (prefix == null) {
+                    prefix = generatePrefix(namespaceURI);
+                    xmlWriter.writeNamespace(prefix, namespaceURI);
+                    xmlWriter.setPrefix(prefix,namespaceURI);
+                }
+
+                if (prefix.trim().length() > 0){
+                    xmlWriter.writeCharacters(prefix + ":" + org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                } else {
+                    // i.e this is the default namespace
+                    xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+                }
+
+            } else {
+                xmlWriter.writeCharacters(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qname));
+            }
+        }
+
+        private void writeQNames(javax.xml.namespace.QName[] qnames,
+                                 javax.xml.stream.XMLStreamWriter xmlWriter) throws javax.xml.stream.XMLStreamException {
+
+            if (qnames != null) {
+                // we have to store this data until last moment since it is not possible to write any
+                // namespace data after writing the charactor data
+                java.lang.StringBuffer stringToWrite = new java.lang.StringBuffer();
+                java.lang.String namespaceURI = null;
+                java.lang.String prefix = null;
+
+                for (int i = 0; i < qnames.length; i++) {
+                    if (i > 0) {
+                        stringToWrite.append(" ");
+                    }
+                    namespaceURI = qnames[i].getNamespaceURI();
+                    if (namespaceURI != null) {
+                        prefix = xmlWriter.getPrefix(namespaceURI);
+                        if ((prefix == null) || (prefix.length() == 0)) {
+                            prefix = generatePrefix(namespaceURI);
+                            xmlWriter.writeNamespace(prefix, namespaceURI);
+                            xmlWriter.setPrefix(prefix,namespaceURI);
+                        }
+
+                        if (prefix.trim().length() > 0){
+                            stringToWrite.append(prefix).append(":").append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        } else {
+                            stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                        }
+                    } else {
+                        stringToWrite.append(org.apache.axis2.databinding.utils.ConverterUtil.convertToString(qnames[i]));
+                    }
+                }
+                xmlWriter.writeCharacters(stringToWrite.toString());
+            }
+
+        }
+
+
+        /**
+         * Register a namespace prefix
+         */
+        private java.lang.String registerPrefix(javax.xml.stream.XMLStreamWriter xmlWriter, java.lang.String namespace) throws javax.xml.stream.XMLStreamException {
+            java.lang.String prefix = xmlWriter.getPrefix(namespace);
+            if (prefix == null) {
+                prefix = generatePrefix(namespace);
+                javax.xml.namespace.NamespaceContext nsContext = xmlWriter.getNamespaceContext();
+                while (true) {
+                    java.lang.String uri = nsContext.getNamespaceURI(prefix);
+                    if (uri == null || uri.length() == 0) {
+                        break;
+                    }
+                    prefix = org.apache.axis2.databinding.utils.BeanUtil.getUniquePrefix();
+                }
+                xmlWriter.writeNamespace(prefix, namespace);
+                xmlWriter.setPrefix(prefix, namespace);
+            }
+            return prefix;
+        }
+
+
+  
+        /**
+        * databinding method to get an XML representation of this object
+        *
+        */
+        public javax.xml.stream.XMLStreamReader getPullParser(javax.xml.namespace.QName qName)
+                    throws org.apache.axis2.databinding.ADBException{
+
+
+        
+                 java.util.ArrayList elementList = new java.util.ArrayList();
+                 java.util.ArrayList attribList = new java.util.ArrayList();
+
+                
+                            elementList.add(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo",
+                                                                      "Continent"));
+                            
+                            
+                                    if (localContinent==null){
+                                         throw new org.apache.axis2.databinding.ADBException("Continent cannot be null!!");
+                                    }
+                                    elementList.add(localContinent);
+                                
+                            elementList.add(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo",
+                                                                      "CountryCodeAndNames"));
+                            
+                            
+                                    if (localCountryCodeAndNames==null){
+                                         throw new org.apache.axis2.databinding.ADBException("CountryCodeAndNames cannot be null!!");
+                                    }
+                                    elementList.add(localCountryCodeAndNames);
+                                
+
+                return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
+            
+            
+
+        }
+
+  
+
+     /**
+      *  Factory class that keeps the parse method
+      */
+    public static class Factory{
+
+        
+        
+
+        /**
+        * static method to create the object
+        * Precondition:  If this object is an element, the current or next start element starts this object and any intervening reader events are ignorable
+        *                If this object is not an element, it is a complex type and the reader is at the event just after the outer start element
+        * Postcondition: If this object is an element, the reader is positioned at its end element
+        *                If this object is a complex type, the reader is positioned at the end element of its outer element
+        */
+        public static TCountryCodeAndNameGroupedByContinent parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            TCountryCodeAndNameGroupedByContinent object =
+                new TCountryCodeAndNameGroupedByContinent();
+
+            int event;
+            java.lang.String nillableValue = null;
+            java.lang.String prefix ="";
+            java.lang.String namespaceuri ="";
+            try {
+                
+                while (!reader.isStartElement() && !reader.isEndElement())
+                    reader.next();
+
+                
+                if (reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","type")!=null){
+                  java.lang.String fullTypeName = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance",
+                        "type");
+                  if (fullTypeName!=null){
+                    java.lang.String nsPrefix = null;
+                    if (fullTypeName.indexOf(":") > -1){
+                        nsPrefix = fullTypeName.substring(0,fullTypeName.indexOf(":"));
+                    }
+                    nsPrefix = nsPrefix==null?"":nsPrefix;
+
+                    java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
+                    
+                            if (!"tCountryCodeAndNameGroupedByContinent".equals(type)){
+                                //find namespace for the prefix
+                                java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
+                                return (TCountryCodeAndNameGroupedByContinent)org.oorsprong.www.websamples_countryinfo.ExtensionMapper.getTypeObject(
+                                     nsUri,type,reader);
+                              }
+                        
+
+                  }
+                
+
+                }
+
+                
+
+                
+                // Note all attributes that were handled. Used to differ normal attributes
+                // from anyAttributes.
+                java.util.Vector handledAttributes = new java.util.Vector();
+                
+
+                
+                    
+                    reader.next();
+                
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","Continent").equals(reader.getName())){
+                                
+                                                object.setContinent(org.oorsprong.www.websamples_countryinfo.TContinent.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                            
+                                    
+                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
+                                
+                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","CountryCodeAndNames").equals(reader.getName())){
+                                
+                                                object.setCountryCodeAndNames(org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName.Factory.parse(reader));
+                                              
+                                        reader.next();
+                                    
+                              }  // End of if for expected property start element
+                                
+                                else{
+                                    // A start element we are not expecting indicates an invalid parameter was passed
+                                    throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                                }
+                              
+                            while (!reader.isStartElement() && !reader.isEndElement())
+                                reader.next();
+                            
+                                if (reader.isStartElement())
+                                // A start element we are not expecting indicates a trailing invalid property
+                                throw new org.apache.axis2.databinding.ADBException("Unexpected subelement " + reader.getName());
+                            
+
+
+
+            } catch (javax.xml.stream.XMLStreamException e) {
+                throw new java.lang.Exception(e);
+            }
+
+            return object;
+        }
+
+        }//end of factory class
+
+        
+
+        }
+           
     
-    /**
-     * Gets the "Continent" element
-     */
-    org.oorsprong.www.websamples_countryinfo.TContinent getContinent();
-    
-    /**
-     * Sets the "Continent" element
-     */
-    void setContinent(org.oorsprong.www.websamples_countryinfo.TContinent continent);
-    
-    /**
-     * Appends and returns a new empty "Continent" element
-     */
-    org.oorsprong.www.websamples_countryinfo.TContinent addNewContinent();
-    
-    /**
-     * Gets the "CountryCodeAndNames" element
-     */
-    org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName getCountryCodeAndNames();
-    
-    /**
-     * Sets the "CountryCodeAndNames" element
-     */
-    void setCountryCodeAndNames(org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName countryCodeAndNames);
-    
-    /**
-     * Appends and returns a new empty "CountryCodeAndNames" element
-     */
-    org.oorsprong.www.websamples_countryinfo.ArrayOftCountryCodeAndName addNewCountryCodeAndNames();
-    
-    /**
-     * A factory class with static methods for creating instances
-     * of this type.
-     */
-    
-    public static final class Factory
-    {
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent newInstance() {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent newInstance(org.apache.xmlbeans.XmlOptions options) {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newInstance( type, options ); }
-        
-        /** @param xmlAsString the string value to parse */
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.lang.String xmlAsString) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( xmlAsString, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.lang.String xmlAsString, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( xmlAsString, type, options ); }
-        
-        /** @param file the file from which to load an xml document */
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.File file) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( file, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.File file, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( file, type, options ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.net.URL u) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( u, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.net.URL u, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( u, type, options ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.InputStream is) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( is, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.InputStream is, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( is, type, options ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.Reader r) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( r, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(java.io.Reader r, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, java.io.IOException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( r, type, options ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(javax.xml.stream.XMLStreamReader sr) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( sr, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(javax.xml.stream.XMLStreamReader sr, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( sr, type, options ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(org.w3c.dom.Node node) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( node, type, null ); }
-        
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(org.w3c.dom.Node node, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( node, type, options ); }
-        
-        /** @deprecated {@link org.apache.xmlbeans.xml.stream.XMLInputStream} */
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(org.apache.xmlbeans.xml.stream.XMLInputStream xis) throws org.apache.xmlbeans.XmlException, org.apache.xmlbeans.xml.stream.XMLStreamException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( xis, type, null ); }
-        
-        /** @deprecated {@link org.apache.xmlbeans.xml.stream.XMLInputStream} */
-        public static org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent parse(org.apache.xmlbeans.xml.stream.XMLInputStream xis, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, org.apache.xmlbeans.xml.stream.XMLStreamException {
-          return (org.oorsprong.www.websamples_countryinfo.TCountryCodeAndNameGroupedByContinent) org.apache.xmlbeans.XmlBeans.getContextTypeLoader().parse( xis, type, options ); }
-        
-        /** @deprecated {@link org.apache.xmlbeans.xml.stream.XMLInputStream} */
-        public static org.apache.xmlbeans.xml.stream.XMLInputStream newValidatingXMLInputStream(org.apache.xmlbeans.xml.stream.XMLInputStream xis) throws org.apache.xmlbeans.XmlException, org.apache.xmlbeans.xml.stream.XMLStreamException {
-          return org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newValidatingXMLInputStream( xis, type, null ); }
-        
-        /** @deprecated {@link org.apache.xmlbeans.xml.stream.XMLInputStream} */
-        public static org.apache.xmlbeans.xml.stream.XMLInputStream newValidatingXMLInputStream(org.apache.xmlbeans.xml.stream.XMLInputStream xis, org.apache.xmlbeans.XmlOptions options) throws org.apache.xmlbeans.XmlException, org.apache.xmlbeans.xml.stream.XMLStreamException {
-          return org.apache.xmlbeans.XmlBeans.getContextTypeLoader().newValidatingXMLInputStream( xis, type, options ); }
-        
-        private Factory() { } // No instance of this class allowed
-    }
-}

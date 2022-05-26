@@ -1,6 +1,6 @@
 
 /**
- * ArrayOftCountryInfo.java
+ * ListOfLanguagesByName.java
  *
  * This file was auto-generated from WSDL
  * by the Apache Axis2 version: 1.6.2  Built on : Apr 17, 2012 (05:34:40 IST)
@@ -11,98 +11,19 @@
             
 
             /**
-            *  ArrayOftCountryInfo bean class
+            *  ListOfLanguagesByName bean class
             */
             @SuppressWarnings({"unchecked","unused"})
         
-        public  class ArrayOftCountryInfo
+        public  class ListOfLanguagesByName
         implements org.apache.axis2.databinding.ADBBean{
-        /* This type was generated from the piece of schema that had
-                name = ArrayOftCountryInfo
-                Namespace URI = http://www.oorsprong.org/websamples.countryinfo
-                Namespace Prefix = 
-                */
+        
+                public static final javax.xml.namespace.QName MY_QNAME = new javax.xml.namespace.QName(
+                "http://www.oorsprong.org/websamples.countryinfo",
+                "ListOfLanguagesByName",
+                "");
+
             
-
-                        /**
-                        * field for TCountryInfo
-                        * This was an Array!
-                        */
-
-                        
-                                    protected org.oorsprong.www.websamples_countryinfo.TCountryInfo[] localTCountryInfo ;
-                                
-                           /*  This tracker boolean wil be used to detect whether the user called the set method
-                          *   for this attribute. It will be used to determine whether to include this field
-                           *   in the serialized XML
-                           */
-                           protected boolean localTCountryInfoTracker = false ;
-
-                           public boolean isTCountryInfoSpecified(){
-                               return localTCountryInfoTracker;
-                           }
-
-                           
-
-                           /**
-                           * Auto generated getter method
-                           * @return org.oorsprong.www.websamples_countryinfo.TCountryInfo[]
-                           */
-                           public  org.oorsprong.www.websamples_countryinfo.TCountryInfo[] getTCountryInfo(){
-                               return localTCountryInfo;
-                           }
-
-                           
-                        
-
-
-                               
-                              /**
-                               * validate the array for TCountryInfo
-                               */
-                              protected void validateTCountryInfo(org.oorsprong.www.websamples_countryinfo.TCountryInfo[] param){
-                             
-                              }
-
-
-                             /**
-                              * Auto generated setter method
-                              * @param param TCountryInfo
-                              */
-                              public void setTCountryInfo(org.oorsprong.www.websamples_countryinfo.TCountryInfo[] param){
-                              
-                                   validateTCountryInfo(param);
-
-                               localTCountryInfoTracker = true;
-                                      
-                                      this.localTCountryInfo=param;
-                              }
-
-                               
-                             
-                             /**
-                             * Auto generated add method for the array for convenience
-                             * @param param org.oorsprong.www.websamples_countryinfo.TCountryInfo
-                             */
-                             public void addTCountryInfo(org.oorsprong.www.websamples_countryinfo.TCountryInfo param){
-                                   if (localTCountryInfo == null){
-                                   localTCountryInfo = new org.oorsprong.www.websamples_countryinfo.TCountryInfo[]{};
-                                   }
-
-                            
-                                 //update the setting tracker
-                                localTCountryInfoTracker = true;
-                            
-
-                               java.util.List list =
-                            org.apache.axis2.databinding.utils.ConverterUtil.toList(localTCountryInfo);
-                               list.add(param);
-                               this.localTCountryInfo =
-                             (org.oorsprong.www.websamples_countryinfo.TCountryInfo[])list.toArray(
-                            new org.oorsprong.www.websamples_countryinfo.TCountryInfo[list.size()]);
-
-                             }
-                             
 
      
      
@@ -119,8 +40,8 @@
 
         
                org.apache.axiom.om.OMDataSource dataSource =
-                       new org.apache.axis2.databinding.ADBDataSource(this,parentQName);
-               return factory.createOMElement(dataSource,parentQName);
+                       new org.apache.axis2.databinding.ADBDataSource(this,MY_QNAME);
+               return factory.createOMElement(dataSource,MY_QNAME);
             
         }
 
@@ -152,43 +73,17 @@
                    java.lang.String namespacePrefix = registerPrefix(xmlWriter,"http://www.oorsprong.org/websamples.countryinfo");
                    if ((namespacePrefix != null) && (namespacePrefix.trim().length() > 0)){
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           namespacePrefix+":ArrayOftCountryInfo",
+                           namespacePrefix+":ListOfLanguagesByName",
                            xmlWriter);
                    } else {
                        writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","type",
-                           "ArrayOftCountryInfo",
+                           "ListOfLanguagesByName",
                            xmlWriter);
                    }
 
                
                    }
-                if (localTCountryInfoTracker){
-                                       if (localTCountryInfo!=null){
-                                            for (int i = 0;i < localTCountryInfo.length;i++){
-                                                if (localTCountryInfo[i] != null){
-                                                 localTCountryInfo[i].serialize(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","tCountryInfo"),
-                                                           xmlWriter);
-                                                } else {
-                                                   
-                                                            writeStartElement(null, "http://www.oorsprong.org/websamples.countryinfo", "tCountryInfo", xmlWriter);
-
-                                                           // write the nil attribute
-                                                           writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                                           xmlWriter.writeEndElement();
-                                                    
-                                                }
-
-                                            }
-                                     } else {
-                                        
-                                                writeStartElement(null, "http://www.oorsprong.org/websamples.countryinfo", "tCountryInfo", xmlWriter);
-
-                                               // write the nil attribute
-                                               writeAttribute("xsi","http://www.w3.org/2001/XMLSchema-instance","nil","1",xmlWriter);
-                                               xmlWriter.writeEndElement();
-                                        
-                                    }
-                                 }
+               
                     xmlWriter.writeEndElement();
                
 
@@ -373,32 +268,7 @@
                  java.util.ArrayList elementList = new java.util.ArrayList();
                  java.util.ArrayList attribList = new java.util.ArrayList();
 
-                 if (localTCountryInfoTracker){
-                             if (localTCountryInfo!=null) {
-                                 for (int i = 0;i < localTCountryInfo.length;i++){
-
-                                    if (localTCountryInfo[i] != null){
-                                         elementList.add(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo",
-                                                                          "tCountryInfo"));
-                                         elementList.add(localTCountryInfo[i]);
-                                    } else {
-                                        
-                                                elementList.add(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo",
-                                                                          "tCountryInfo"));
-                                                elementList.add(null);
-                                            
-                                    }
-
-                                 }
-                             } else {
-                                 
-                                        elementList.add(new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo",
-                                                                          "tCountryInfo"));
-                                        elementList.add(localTCountryInfo);
-                                    
-                             }
-
-                        }
+                
 
                 return new org.apache.axis2.databinding.utils.reader.ADBXMLStreamReaderImpl(qName, elementList.toArray(), attribList.toArray());
             
@@ -423,9 +293,9 @@
         * Postcondition: If this object is an element, the reader is positioned at its end element
         *                If this object is a complex type, the reader is positioned at the end element of its outer element
         */
-        public static ArrayOftCountryInfo parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
-            ArrayOftCountryInfo object =
-                new ArrayOftCountryInfo();
+        public static ListOfLanguagesByName parse(javax.xml.stream.XMLStreamReader reader) throws java.lang.Exception{
+            ListOfLanguagesByName object =
+                new ListOfLanguagesByName();
 
             int event;
             java.lang.String nillableValue = null;
@@ -449,10 +319,10 @@
 
                     java.lang.String type = fullTypeName.substring(fullTypeName.indexOf(":")+1);
                     
-                            if (!"ArrayOftCountryInfo".equals(type)){
+                            if (!"ListOfLanguagesByName".equals(type)){
                                 //find namespace for the prefix
                                 java.lang.String nsUri = reader.getNamespaceContext().getNamespaceURI(nsPrefix);
-                                return (ArrayOftCountryInfo)org.oorsprong.www.websamples_countryinfo.ExtensionMapper.getTypeObject(
+                                return (ListOfLanguagesByName)org.oorsprong.www.websamples_countryinfo.ExtensionMapper.getTypeObject(
                                      nsUri,type,reader);
                               }
                         
@@ -473,67 +343,7 @@
                 
                     
                     reader.next();
-                
-                        java.util.ArrayList list1 = new java.util.ArrayList();
-                    
-                                    
-                                    while (!reader.isStartElement() && !reader.isEndElement()) reader.next();
-                                
-                                    if (reader.isStartElement() && new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","tCountryInfo").equals(reader.getName())){
-                                
-                                    
-                                    
-                                    // Process the array and step past its final element's end.
-                                    
-                                                          nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                                          if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                                              list1.add(null);
-                                                              reader.next();
-                                                          } else {
-                                                        list1.add(org.oorsprong.www.websamples_countryinfo.TCountryInfo.Factory.parse(reader));
-                                                                }
-                                                        //loop until we find a start element that is not part of this array
-                                                        boolean loopDone1 = false;
-                                                        while(!loopDone1){
-                                                            // We should be at the end element, but make sure
-                                                            while (!reader.isEndElement())
-                                                                reader.next();
-                                                            // Step out of this element
-                                                            reader.next();
-                                                            // Step to next element event.
-                                                            while (!reader.isStartElement() && !reader.isEndElement())
-                                                                reader.next();
-                                                            if (reader.isEndElement()){
-                                                                //two continuous end elements means we are exiting the xml structure
-                                                                loopDone1 = true;
-                                                            } else {
-                                                                if (new javax.xml.namespace.QName("http://www.oorsprong.org/websamples.countryinfo","tCountryInfo").equals(reader.getName())){
-                                                                    
-                                                                      nillableValue = reader.getAttributeValue("http://www.w3.org/2001/XMLSchema-instance","nil");
-                                                                      if ("true".equals(nillableValue) || "1".equals(nillableValue)){
-                                                                          list1.add(null);
-                                                                          reader.next();
-                                                                      } else {
-                                                                    list1.add(org.oorsprong.www.websamples_countryinfo.TCountryInfo.Factory.parse(reader));
-                                                                        }
-                                                                }else{
-                                                                    loopDone1 = true;
-                                                                }
-                                                            }
-                                                        }
-                                                        // call the converter utility  to convert and set the array
-                                                        
-                                                        object.setTCountryInfo((org.oorsprong.www.websamples_countryinfo.TCountryInfo[])
-                                                            org.apache.axis2.databinding.utils.ConverterUtil.convertToArray(
-                                                                org.oorsprong.www.websamples_countryinfo.TCountryInfo.class,
-                                                                list1));
-                                                            
-                              }  // End of if for expected property start element
-                                
-                                    else {
-                                        
-                                    }
-                                  
+                  
                             while (!reader.isStartElement() && !reader.isEndElement())
                                 reader.next();
                             
