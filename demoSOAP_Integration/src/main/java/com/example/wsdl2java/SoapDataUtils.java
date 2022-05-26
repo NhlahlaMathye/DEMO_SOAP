@@ -2,7 +2,6 @@ package com.example.wsdl2java;
 
 import demo.handler.SoapDataHandlerObject;
 import org.oorsprong.websamples_countryinfo.CountryInfoServiceStub;
-import org.oorsprong.www.websamples_countryinfo.*;
 import wcs.ListCountryNamesByNamesResponse;
 import wcs.TCountryName;
 import wss.ListOfLanguagesByNameResponse;
@@ -72,6 +71,26 @@ public class SoapDataUtils {
     public static void listOfLanguages() throws Exception {
 
 
+
+    }
+    public static  void getCountriesByName()
+    {
+        for (int x = 0; x < port.listOfCountryNamesByName().tCountryCodeAndName.size(); x++) {
+
+            String name = port.listOfCountryNamesByName().tCountryCodeAndName.get(x).getSName();
+            String isoCode = port.listOfCountryNamesByName().tCountryCodeAndName.get(x).getSISOCode();
+            System.out.println("Country Name:" + name + "\nCountry Code:" + isoCode + "\n" + "");
+        }
+    }
+
+        public static void getLanguagesByName()
+    {
+        for (int i = 0; i < port.listOfLanguagesByName().tLanguage.size(); i++)
+        {
+            String languageName = port.listOfLanguagesByName().tLanguage.get(i).getSName();
+            String languageCode = port.listOfLanguagesByName().tLanguage.get(i).getSISOCode();
+            System.out.println("Language Name:" + languageName + "\nLanguage Code: " + languageCode + "\n");
+        }
     }
 
     public static void checkListOfCountryAndName()

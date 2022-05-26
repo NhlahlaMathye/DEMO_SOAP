@@ -49,7 +49,7 @@
             * override this method for handling normal response from fullCountryInfo operation
             */
            public void receiveResultfullCountryInfo(
-                    org.oorsprong.www.websamples_countryinfo.FullCountryInfoResponse result
+                    CountryInfoServiceStub.FullCountryInfoResponse result
                         ) {
            }
 
@@ -65,7 +65,7 @@
             * override this method for handling normal response from countryFlag operation
             */
            public void receiveResultcountryFlag(
-                    org.oorsprong.www.websamples_countryinfo.CountryFlagResponse result
+                    CountryInfoServiceStub.CountryFlagResponse result
                         ) {
            }
 
@@ -81,7 +81,7 @@
             * override this method for handling normal response from countryName operation
             */
            public void receiveResultcountryName(
-                    org.oorsprong.www.websamples_countryinfo.CountryNameResponse result
+                    CountryInfoServiceStub.CountryNameResponse result
                         ) {
            }
 
@@ -97,7 +97,7 @@
             * override this method for handling normal response from countryCurrency operation
             */
            public void receiveResultcountryCurrency(
-                    org.oorsprong.www.websamples_countryinfo.CountryCurrencyResponse result
+                    CountryInfoServiceStub.CountryCurrencyResponse result
                         ) {
            }
 
@@ -113,7 +113,7 @@
             * override this method for handling normal response from listOfCountryNamesByCode operation
             */
            public void receiveResultlistOfCountryNamesByCode(
-                    org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByCodeResponse result
+                    CountryInfoServiceStub.ListOfCountryNamesByCodeResponse result
                         ) {
            }
 
@@ -129,7 +129,7 @@
             * override this method for handling normal response from listOfCurrenciesByName operation
             */
            public void receiveResultlistOfCurrenciesByName(
-                    org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByNameResponse result
+                    CountryInfoServiceStub.ListOfCurrenciesByNameResponse result
                         ) {
            }
 
@@ -145,7 +145,7 @@
             * override this method for handling normal response from countryIntPhoneCode operation
             */
            public void receiveResultcountryIntPhoneCode(
-                    org.oorsprong.www.websamples_countryinfo.CountryIntPhoneCodeResponse result
+                    CountryInfoServiceStub.CountryIntPhoneCodeResponse result
                         ) {
            }
 
@@ -161,7 +161,7 @@
             * override this method for handling normal response from currencyName operation
             */
            public void receiveResultcurrencyName(
-                    org.oorsprong.www.websamples_countryinfo.CurrencyNameResponse result
+                    CountryInfoServiceStub.CurrencyNameResponse result
                         ) {
            }
 
@@ -177,7 +177,7 @@
             * override this method for handling normal response from listOfCurrenciesByCode operation
             */
            public void receiveResultlistOfCurrenciesByCode(
-                    org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByCodeResponse result
+                    CountryInfoServiceStub.ListOfCurrenciesByCodeResponse result
                         ) {
            }
 
@@ -193,7 +193,7 @@
             * override this method for handling normal response from listOfLanguagesByCode operation
             */
            public void receiveResultlistOfLanguagesByCode(
-                    org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByCodeResponse result
+                    CountryInfoServiceStub.ListOfLanguagesByCodeResponse result
                         ) {
            }
 
@@ -209,7 +209,7 @@
             * override this method for handling normal response from languageISOCode operation
             */
            public void receiveResultlanguageISOCode(
-                    org.oorsprong.www.websamples_countryinfo.LanguageISOCodeResponse result
+                    CountryInfoServiceStub.LanguageISOCodeResponse result
                         ) {
            }
 
@@ -225,7 +225,7 @@
             * override this method for handling normal response from capitalCity operation
             */
            public void receiveResultcapitalCity(
-                    org.oorsprong.www.websamples_countryinfo.CapitalCityResponse result
+                    CountryInfoServiceStub.CapitalCityResponse result
                         ) {
            }
 
@@ -241,7 +241,7 @@
             * override this method for handling normal response from listOfLanguagesByName operation
             */
            public void receiveResultlistOfLanguagesByName(
-                    org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByNameResponse result
+                    CountryInfoServiceStub.ListOfLanguagesByNameResponse result
                         ) {
            }
 
@@ -257,7 +257,7 @@
             * override this method for handling normal response from listOfCountryNamesGroupedByContinent operation
             */
            public void receiveResultlistOfCountryNamesGroupedByContinent(
-                    org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesGroupedByContinentResponse result
+                    CountryInfoServiceStub.ListOfCountryNamesGroupedByContinentResponse result
                         ) {
            }
 
@@ -273,7 +273,7 @@
             * override this method for handling normal response from listOfCountryNamesByName operation
             */
            public void receiveResultlistOfCountryNamesByName(
-                    org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByNameResponse result
+                    CountryInfoServiceStub.ListOfCountryNamesByNameResponse result
                         ) {
            }
 
@@ -289,7 +289,7 @@
             * override this method for handling normal response from listOfContinentsByName operation
             */
            public void receiveResultlistOfContinentsByName(
-                    org.oorsprong.www.websamples_countryinfo.ListOfContinentsByNameResponse result
+                    CountryInfoServiceStub.ListOfContinentsByNameResponse result
                         ) {
            }
 
@@ -305,7 +305,7 @@
             * override this method for handling normal response from languageName operation
             */
            public void receiveResultlanguageName(
-                    org.oorsprong.www.websamples_countryinfo.LanguageNameResponse result
+                    CountryInfoServiceStub.LanguageNameResponse result
                         ) {
            }
 
@@ -321,7 +321,7 @@
             * override this method for handling normal response from listOfContinentsByCode operation
             */
            public void receiveResultlistOfContinentsByCode(
-                    org.oorsprong.www.websamples_countryinfo.ListOfContinentsByCodeResponse result
+                    CountryInfoServiceStub.ListOfContinentsByCodeResponse result
                         ) {
            }
 
@@ -337,7 +337,7 @@
             * override this method for handling normal response from countriesUsingCurrency operation
             */
            public void receiveResultcountriesUsingCurrency(
-                    org.oorsprong.www.websamples_countryinfo.CountriesUsingCurrencyResponse result
+                    CountryInfoServiceStub.CountriesUsingCurrencyResponse result
                         ) {
            }
 
@@ -353,7 +353,7 @@
             * override this method for handling normal response from countryISOCode operation
             */
            public void receiveResultcountryISOCode(
-                    org.oorsprong.www.websamples_countryinfo.CountryISOCodeResponse result
+                    CountryInfoServiceStub.CountryISOCodeResponse result
                         ) {
            }
 
@@ -369,7 +369,7 @@
             * override this method for handling normal response from fullCountryInfoAllCountries operation
             */
            public void receiveResultfullCountryInfoAllCountries(
-                    org.oorsprong.www.websamples_countryinfo.FullCountryInfoAllCountriesResponse result
+                    CountryInfoServiceStub.FullCountryInfoAllCountriesResponse result
                         ) {
            }
 

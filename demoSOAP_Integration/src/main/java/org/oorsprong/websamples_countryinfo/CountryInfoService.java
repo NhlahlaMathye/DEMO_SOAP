@@ -24,9 +24,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.FullCountryInfoResponse fullCountryInfo(
+                     public CountryInfoServiceStub.FullCountryInfoResponse fullCountryInfo(
 
-                        org.oorsprong.www.websamples_countryinfo.FullCountryInfo fullCountryInfo0)
+                        CountryInfoServiceStub.FullCountryInfo fullCountryInfo0)
                         throws java.rmi.RemoteException
              ;
 
@@ -39,7 +39,7 @@
           */
         public void startfullCountryInfo(
 
-            org.oorsprong.www.websamples_countryinfo.FullCountryInfo fullCountryInfo0,
+            CountryInfoServiceStub.FullCountryInfo fullCountryInfo0,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -55,9 +55,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountryFlagResponse countryFlag(
+                     public CountryInfoServiceStub.CountryFlagResponse countryFlag(
 
-                        org.oorsprong.www.websamples_countryinfo.CountryFlag countryFlag2)
+                        CountryInfoServiceStub.CountryFlag countryFlag2)
                         throws java.rmi.RemoteException
              ;
 
@@ -70,7 +70,7 @@
           */
         public void startcountryFlag(
 
-            org.oorsprong.www.websamples_countryinfo.CountryFlag countryFlag2,
+            CountryInfoServiceStub.CountryFlag countryFlag2,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -86,9 +86,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountryNameResponse countryName(
+                     public CountryInfoServiceStub.CountryNameResponse countryName(
 
-                        org.oorsprong.www.websamples_countryinfo.CountryName countryName4)
+                        CountryInfoServiceStub.CountryName countryName4)
                         throws java.rmi.RemoteException
              ;
 
@@ -101,7 +101,7 @@
           */
         public void startcountryName(
 
-            org.oorsprong.www.websamples_countryinfo.CountryName countryName4,
+            CountryInfoServiceStub.CountryName countryName4,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -117,9 +117,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountryCurrencyResponse countryCurrency(
+                     public CountryInfoServiceStub.CountryCurrencyResponse countryCurrency(
 
-                        org.oorsprong.www.websamples_countryinfo.CountryCurrency countryCurrency6)
+                        CountryInfoServiceStub.CountryCurrency countryCurrency6)
                         throws java.rmi.RemoteException
              ;
 
@@ -132,7 +132,7 @@
           */
         public void startcountryCurrency(
 
-            org.oorsprong.www.websamples_countryinfo.CountryCurrency countryCurrency6,
+            CountryInfoServiceStub.CountryCurrency countryCurrency6,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -148,9 +148,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByCodeResponse listOfCountryNamesByCode(
+                     public CountryInfoServiceStub.ListOfCountryNamesByCodeResponse listOfCountryNamesByCode(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByCode listOfCountryNamesByCode8)
+                        CountryInfoServiceStub.ListOfCountryNamesByCode listOfCountryNamesByCode8)
                         throws java.rmi.RemoteException
              ;
 
@@ -163,7 +163,7 @@
           */
         public void startlistOfCountryNamesByCode(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByCode listOfCountryNamesByCode8,
+            CountryInfoServiceStub.ListOfCountryNamesByCode listOfCountryNamesByCode8,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -179,9 +179,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByNameResponse listOfCurrenciesByName(
+                     public CountryInfoServiceStub.ListOfCurrenciesByNameResponse listOfCurrenciesByName(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByName listOfCurrenciesByName10)
+                        CountryInfoServiceStub.ListOfCurrenciesByName listOfCurrenciesByName10)
                         throws java.rmi.RemoteException
              ;
 
@@ -194,7 +194,7 @@
           */
         public void startlistOfCurrenciesByName(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByName listOfCurrenciesByName10,
+            CountryInfoServiceStub.ListOfCurrenciesByName listOfCurrenciesByName10,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -210,9 +210,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountryIntPhoneCodeResponse countryIntPhoneCode(
+                     public CountryInfoServiceStub.CountryIntPhoneCodeResponse countryIntPhoneCode(
 
-                        org.oorsprong.www.websamples_countryinfo.CountryIntPhoneCode countryIntPhoneCode12)
+                        CountryInfoServiceStub.CountryIntPhoneCode countryIntPhoneCode12)
                         throws java.rmi.RemoteException
              ;
 
@@ -225,7 +225,7 @@
           */
         public void startcountryIntPhoneCode(
 
-            org.oorsprong.www.websamples_countryinfo.CountryIntPhoneCode countryIntPhoneCode12,
+            CountryInfoServiceStub.CountryIntPhoneCode countryIntPhoneCode12,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -241,9 +241,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CurrencyNameResponse currencyName(
+                     public CountryInfoServiceStub.CurrencyNameResponse currencyName(
 
-                        org.oorsprong.www.websamples_countryinfo.CurrencyName currencyName14)
+                        CountryInfoServiceStub.CurrencyName currencyName14)
                         throws java.rmi.RemoteException
              ;
 
@@ -256,7 +256,7 @@
           */
         public void startcurrencyName(
 
-            org.oorsprong.www.websamples_countryinfo.CurrencyName currencyName14,
+            CountryInfoServiceStub.CurrencyName currencyName14,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -272,9 +272,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByCodeResponse listOfCurrenciesByCode(
+                     public CountryInfoServiceStub.ListOfCurrenciesByCodeResponse listOfCurrenciesByCode(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByCode listOfCurrenciesByCode16)
+                        CountryInfoServiceStub.ListOfCurrenciesByCode listOfCurrenciesByCode16)
                         throws java.rmi.RemoteException
              ;
 
@@ -287,7 +287,7 @@
           */
         public void startlistOfCurrenciesByCode(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfCurrenciesByCode listOfCurrenciesByCode16,
+            CountryInfoServiceStub.ListOfCurrenciesByCode listOfCurrenciesByCode16,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -303,9 +303,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByCodeResponse listOfLanguagesByCode(
+                     public CountryInfoServiceStub.ListOfLanguagesByCodeResponse listOfLanguagesByCode(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByCode listOfLanguagesByCode18)
+                        CountryInfoServiceStub.ListOfLanguagesByCode listOfLanguagesByCode18)
                         throws java.rmi.RemoteException
              ;
 
@@ -318,7 +318,7 @@
           */
         public void startlistOfLanguagesByCode(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByCode listOfLanguagesByCode18,
+            CountryInfoServiceStub.ListOfLanguagesByCode listOfLanguagesByCode18,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -334,9 +334,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.LanguageISOCodeResponse languageISOCode(
+                     public CountryInfoServiceStub.LanguageISOCodeResponse languageISOCode(
 
-                        org.oorsprong.www.websamples_countryinfo.LanguageISOCode languageISOCode20)
+                        CountryInfoServiceStub.LanguageISOCode languageISOCode20)
                         throws java.rmi.RemoteException
              ;
 
@@ -349,7 +349,7 @@
           */
         public void startlanguageISOCode(
 
-            org.oorsprong.www.websamples_countryinfo.LanguageISOCode languageISOCode20,
+            CountryInfoServiceStub.LanguageISOCode languageISOCode20,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -365,9 +365,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CapitalCityResponse capitalCity(
+                     public CountryInfoServiceStub.CapitalCityResponse capitalCity(
 
-                        org.oorsprong.www.websamples_countryinfo.CapitalCity capitalCity22)
+                        CountryInfoServiceStub.CapitalCity capitalCity22)
                         throws java.rmi.RemoteException
              ;
 
@@ -380,7 +380,7 @@
           */
         public void startcapitalCity(
 
-            org.oorsprong.www.websamples_countryinfo.CapitalCity capitalCity22,
+            CountryInfoServiceStub.CapitalCity capitalCity22,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -396,9 +396,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByNameResponse listOfLanguagesByName(
+                     public CountryInfoServiceStub.ListOfLanguagesByNameResponse listOfLanguagesByName(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByName listOfLanguagesByName24)
+                        CountryInfoServiceStub.ListOfLanguagesByName listOfLanguagesByName24)
                         throws java.rmi.RemoteException
              ;
 
@@ -411,7 +411,7 @@
           */
         public void startlistOfLanguagesByName(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfLanguagesByName listOfLanguagesByName24,
+            CountryInfoServiceStub.ListOfLanguagesByName listOfLanguagesByName24,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -427,9 +427,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesGroupedByContinentResponse listOfCountryNamesGroupedByContinent(
+                     public CountryInfoServiceStub.ListOfCountryNamesGroupedByContinentResponse listOfCountryNamesGroupedByContinent(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesGroupedByContinent listOfCountryNamesGroupedByContinent26)
+                        CountryInfoServiceStub.ListOfCountryNamesGroupedByContinent listOfCountryNamesGroupedByContinent26)
                         throws java.rmi.RemoteException
              ;
 
@@ -442,7 +442,7 @@
           */
         public void startlistOfCountryNamesGroupedByContinent(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesGroupedByContinent listOfCountryNamesGroupedByContinent26,
+            CountryInfoServiceStub.ListOfCountryNamesGroupedByContinent listOfCountryNamesGroupedByContinent26,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -458,9 +458,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByNameResponse listOfCountryNamesByName(
+                     public CountryInfoServiceStub.ListOfCountryNamesByNameResponse listOfCountryNamesByName(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByName listOfCountryNamesByName28)
+                        CountryInfoServiceStub.ListOfCountryNamesByName listOfCountryNamesByName28)
                         throws java.rmi.RemoteException
              ;
 
@@ -473,7 +473,7 @@
           */
         public void startlistOfCountryNamesByName(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfCountryNamesByName listOfCountryNamesByName28,
+            CountryInfoServiceStub.ListOfCountryNamesByName listOfCountryNamesByName28,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -489,9 +489,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfContinentsByNameResponse listOfContinentsByName(
+                     public CountryInfoServiceStub.ListOfContinentsByNameResponse listOfContinentsByName(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfContinentsByName listOfContinentsByName30)
+                        CountryInfoServiceStub.ListOfContinentsByName listOfContinentsByName30)
                         throws java.rmi.RemoteException
              ;
 
@@ -504,7 +504,7 @@
           */
         public void startlistOfContinentsByName(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfContinentsByName listOfContinentsByName30,
+            CountryInfoServiceStub.ListOfContinentsByName listOfContinentsByName30,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -520,9 +520,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.LanguageNameResponse languageName(
+                     public CountryInfoServiceStub.LanguageNameResponse languageName(
 
-                        org.oorsprong.www.websamples_countryinfo.LanguageName languageName32)
+                        CountryInfoServiceStub.LanguageName languageName32)
                         throws java.rmi.RemoteException
              ;
 
@@ -535,7 +535,7 @@
           */
         public void startlanguageName(
 
-            org.oorsprong.www.websamples_countryinfo.LanguageName languageName32,
+            CountryInfoServiceStub.LanguageName languageName32,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -551,9 +551,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.ListOfContinentsByCodeResponse listOfContinentsByCode(
+                     public CountryInfoServiceStub.ListOfContinentsByCodeResponse listOfContinentsByCode(
 
-                        org.oorsprong.www.websamples_countryinfo.ListOfContinentsByCode listOfContinentsByCode34)
+                        CountryInfoServiceStub.ListOfContinentsByCode listOfContinentsByCode34)
                         throws java.rmi.RemoteException
              ;
 
@@ -566,7 +566,7 @@
           */
         public void startlistOfContinentsByCode(
 
-            org.oorsprong.www.websamples_countryinfo.ListOfContinentsByCode listOfContinentsByCode34,
+            CountryInfoServiceStub.ListOfContinentsByCode listOfContinentsByCode34,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -582,9 +582,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountriesUsingCurrencyResponse countriesUsingCurrency(
+                     public CountryInfoServiceStub.CountriesUsingCurrencyResponse countriesUsingCurrency(
 
-                        org.oorsprong.www.websamples_countryinfo.CountriesUsingCurrency countriesUsingCurrency36)
+                        CountryInfoServiceStub.CountriesUsingCurrency countriesUsingCurrency36)
                         throws java.rmi.RemoteException
              ;
 
@@ -597,7 +597,7 @@
           */
         public void startcountriesUsingCurrency(
 
-            org.oorsprong.www.websamples_countryinfo.CountriesUsingCurrency countriesUsingCurrency36,
+            CountryInfoServiceStub.CountriesUsingCurrency countriesUsingCurrency36,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -613,9 +613,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.CountryISOCodeResponse countryISOCode(
+                     public CountryInfoServiceStub.CountryISOCodeResponse countryISOCode(
 
-                        org.oorsprong.www.websamples_countryinfo.CountryISOCode countryISOCode38)
+                        CountryInfoServiceStub.CountryISOCode countryISOCode38)
                         throws java.rmi.RemoteException
              ;
 
@@ -628,7 +628,7 @@
           */
         public void startcountryISOCode(
 
-            org.oorsprong.www.websamples_countryinfo.CountryISOCode countryISOCode38,
+            CountryInfoServiceStub.CountryISOCode countryISOCode38,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
@@ -644,9 +644,9 @@
          */
 
          
-                     public org.oorsprong.www.websamples_countryinfo.FullCountryInfoAllCountriesResponse fullCountryInfoAllCountries(
+                     public CountryInfoServiceStub.FullCountryInfoAllCountriesResponse fullCountryInfoAllCountries(
 
-                        org.oorsprong.www.websamples_countryinfo.FullCountryInfoAllCountries fullCountryInfoAllCountries40)
+                        CountryInfoServiceStub.FullCountryInfoAllCountries fullCountryInfoAllCountries40)
                         throws java.rmi.RemoteException
              ;
 
@@ -659,7 +659,7 @@
           */
         public void startfullCountryInfoAllCountries(
 
-            org.oorsprong.www.websamples_countryinfo.FullCountryInfoAllCountries fullCountryInfoAllCountries40,
+            CountryInfoServiceStub.FullCountryInfoAllCountries fullCountryInfoAllCountries40,
 
             final org.oorsprong.websamples_countryinfo.CountryInfoServiceCallbackHandler callback)
 
