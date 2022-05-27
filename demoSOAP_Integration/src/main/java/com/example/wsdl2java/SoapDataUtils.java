@@ -76,7 +76,7 @@ public class SoapDataUtils {
         }
     }
 
-    public static  void getCountriesByName()
+    public static void getCountriesByName()
     {
         for (int x = 0; x < port.listOfCountryNamesByName().tCountryCodeAndName.size(); x++) {
 
