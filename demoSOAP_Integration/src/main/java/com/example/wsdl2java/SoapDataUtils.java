@@ -121,7 +121,6 @@ public class SoapDataUtils {
         String objectXmlString = SoapDataUtils.marshallObject(listOfLanguagesByName);
         String objectSoapString = new SoapDataUtils().createGenericSoapString(objectXmlString);
         String apiCallResponse = SoapDataUtils.apiRequest(objectSoapString, BASE_URL, MEDIA_TYPE );
-        //logger.info("Here is the response " + apiCallResponse);
         if(apiCallResponse == null)
         {
             System.out.println("API Response call is null " + objectSoapString + " " + apiCallResponse );
