@@ -1,9 +1,4 @@
 package com.example.wsdl2java;
-
-import org.apache.axis2.AxisFault;
-
-import java.net.MalformedURLException;
-import java.rmi.RemoteException;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -12,19 +7,16 @@ public class SoapDataApp {
     static boolean checkInfo;
     static int programLevel = 0;
 
-    public static void main(String[] args) throws MalformedURLException, AxisFault {
+    public static void main(String[] args) {
 
         checkInfo = false;
         while (programLevel != 9)
         {
             SoapDataApp.mainProgramData(programLevel);
         }
-
-
-
     }
 
-    private static void mainProgramData(int inputUser) throws InputMismatchException, MalformedURLException {
+    private static void mainProgramData(int inputUser) throws InputMismatchException {
 
         Scanner sc = new Scanner(System.in);
 
@@ -56,14 +48,9 @@ public class SoapDataApp {
         }catch (InputMismatchException e)
         {
             System.out.println("Expects a number!!");
-        } catch (RemoteException e) {
-            e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
 
     }
-
-
-
 }
