@@ -48,7 +48,7 @@ public class SoapDataUtils {
     static CountryInfoServiceStub serviceStub;
     static {
         try {
-            serviceStub = new CountryInfoServiceStub("http://webservices.oorsprong.org/websamples.countryinfo/CountryInfoService.wso?WSDL");
+            serviceStub = new CountryInfoServiceStub(ENDPOINT);
         } catch (AxisFault e) {
             e.printStackTrace();
         }
